@@ -1,6 +1,9 @@
-FROM klakegg/hugo:0.101.0-busybox
+FROM klakegg/hugo:0.101.0-busybox as builder
 
 WORKDIR /src
 COPY . .
 
-EXPOSE 1313
+RUN hugo
+
+FROM nginx
+COPY --from=builder /src/public /usr/share/nginx/html

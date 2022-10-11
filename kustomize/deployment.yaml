@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: turbloggen-deployment
+  labels:
+    app: turbloggen
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: turbloggen
+  template:
+    metadata:
+      labels:
+        app: turbloggen
+    spec:
+      containers:
+      - name: turbloggen
+        image: ghcr.io/pettermk/turbloggen@sha256:311606dc7f868464a820f7738db0f99d5aacd6476d9b149d4dc9f438b509b39b
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: turbloggen-service
+spec:
+  selector:
+    app: turbloggen
+  ports:
+    - port: 8080
+      targetPort: 80
+      protocol: TCP
+      name: http
+  type: ClusterIP
+

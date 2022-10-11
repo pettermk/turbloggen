@@ -3,5 +3,5 @@ kind: Kustomization
 namespace: turbloggen
 resources:
   - deployment.yaml
-  - ingress.yaml
-  - cert-manager.yaml
+ # - ingress.yaml
+ # - cert-manager.yaml

@@ -12,5 +12,5 @@ med feit knallrød fjellørret satte stemingen, eneste vi manglet var en knert.
 
 #### Dag 2 Morgenfiske og hjemtur
 Etter litt morgenfiske var det på tide å rette nesa hjemover. Vi fant en kortere
-vei over Holbefjellet, så vi sparte litt tid på hjemturen. 
+vei over Holbufjellet, så vi sparte litt tid på hjemturen. 
  

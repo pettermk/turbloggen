@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: turbloggen
-        image: ghcr.io/pettermk/turbloggen:main
+        image: ghcr.io/pettermk/turbloggen:v0.1.0
         ports:
         - containerPort: 80
         imagePullPolicy: Always

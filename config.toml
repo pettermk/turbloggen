@@ -1,4 +1,4 @@
-baseURL = 'https://turbloggen.kvalvaag-tech.com'
+baseURL = 'https://turer.kvalvaag.org'
 languageCode = 'en-us'
 title = 'Turbloggen'
 theme = 'hugo-split-gallery'

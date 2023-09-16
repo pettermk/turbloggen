@@ -10,9 +10,20 @@ spec:
   tls:
   - hosts:
     - turbloggen.kvalvaag-tech.com
+    - turer.kvalvaag.org
     secretName: kvalvaag-tech-tls
   rules:
     - host: turbloggen.kvalvaag-tech.com
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: turbloggen-service
+              port:
+                number: 8080
+    - host: turer.kvalvaag.org
       http:
         paths:
         - path: /

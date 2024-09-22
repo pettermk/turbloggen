@@ -24,9 +24,6 @@ og jaktet sør for Tunnurfjellet. Fortsatte østover og gikk ned i Viermadalen. 
 Kostet meg ett stk vannflaske. Så ikke så mye mer fugl denne dagen.
 
 #### Dag 4
-Gikk i skauen vest for virmaelva. Skau, kratt og myr, men endelig litt fugl.
-
-#### Dag 5
 Lotterfjellet. Kjent for sitt lotteriaktige jaktresultat. Men denne gang fikk vi jackpot!
 
 Vi startet den lange turen opp stien øst for Viermaelva. I toppen ved det runde reingjerdet svingte vi
@@ -39,7 +36,7 @@ Lovende for neste sesong!
 
 På Lotterfjellet så vi også store mengder lemen i år.
 
-#### Dag 6
+#### Dag 5
 Vi tok en halv dags jakt på Blyvatnsiden uten resultat, før båten hentet oss kl 14:00. Eller var det 14:30 mon tro?
 Etter landgang med skyssbåten lastet vi opp bilen og kjørte hele veien til Hemnskjela. Her var det besøk fra 
 Trondheim og Stjørdal, makrellfiske, krabbeteine uten krabbe og rypemiddag.

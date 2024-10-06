@@ -1,4 +1,4 @@
-FROM klakegg/hugo:0.101.0-busybox as builder
+FROM floryn90/hugo:0.121.2-busybox as builder
 
 WORKDIR /src
 COPY . .

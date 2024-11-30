@@ -3,10 +3,10 @@ kind: Ingress
 metadata:
   name: turbloggen-ingress
   annotations:
-    kubernetes.io/ingress.class: traefik
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     cert-manager.io/issuer: "letsencrypt-prod"
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
     - turer.kvalvaag.org

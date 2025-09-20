@@ -1,7 +1,7 @@
 ---
-title: "Børgefjell 2024"
+title: "Børgefjell 2025"
 date: 2025-09-20T00:00:00+00:00
-images: []
+images: ["images/IMG_1490.jpeg"]
 seealso: ["posts/borgefjell_2021", "posts/borgefjell_2022", "posts/borgefjell_2025"]
 ---
 

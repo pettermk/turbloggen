@@ -1,4 +1,6 @@
 baseURL = 'https://turer.kvalvaag.org'
+# Uncomment for local development
+# baseURL = 'http://localhost'
 languageCode = 'en-us'
 title = 'Turbloggen'
 theme = 'hugo-split-gallery'

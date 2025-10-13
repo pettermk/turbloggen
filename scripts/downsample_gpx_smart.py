@@ -74,7 +74,8 @@ def process_directory(directory, tolerance=0.0001):
 def main():
     tolerance = 0.0001  # Default tolerance (smaller = more points kept)
     target_dir = None
-    
+    in_place = False
+
     # Parse command line arguments
     i = 1
     while i < len(sys.argv):
@@ -85,33 +86,51 @@ def main():
             else:
                 print("Error: --tolerance requires a value")
                 sys.exit(1)
+        elif sys.argv[i] == "--in-place":
+            in_place = True
+            i += 1
         else:
             target_dir = sys.argv[i]
             i += 1
-    
+
+    # If in-place mode and target is a file, process just that file
+    if in_place and target_dir and os.path.isfile(target_dir):
+        input_file = target_dir
+        temp_file = input_file + ".tmp"
+
+        print(f"Processing {input_file} in-place with tolerance {tolerance}...")
+        downsample_gpx_smart(input_file, temp_file, tolerance)
+
+        if os.path.exists(temp_file):
+            original_size = os.path.getsize(input_file)
+            new_size = os.path.getsize(temp_file)
+            print(f"  Reduced from {original_size / 1024:.1f} KB to {new_size / 1024:.1f} KB")
+            shutil.move(temp_file, input_file)
+        return
+
     if not target_dir:
         # Default to looking for GPX files in the content/posts directory structure
         script_dir = Path(__file__).parent
         project_root = script_dir.parent
         content_dir = project_root / "content" / "posts"
         target_dir = str(content_dir)
-    
+
     if not os.path.exists(target_dir):
         print(f"Directory {target_dir} does not exist")
         return
-    
+
     print(f"Smart GPX Downsampling using Ramer-Douglas-Peucker Algorithm")
     print(f"Tolerance: {tolerance} (adjust with --tolerance <value>)")
     print(f"  - Smaller tolerance = more points kept, better accuracy")
     print(f"  - Larger tolerance = fewer points kept, more compression")
     print()
-    
+
     # Process all subdirectories that contain GPX files
     for root, dirs, files in os.walk(target_dir):
         gpx_files = [f for f in files if f.endswith('.gpx')]
         if gpx_files:
             process_directory(root, tolerance)
-    
+
     print("\nDone!")
 
 if __name__ == "__main__":

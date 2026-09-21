@@ -1,3 +1,4 @@
 resources/_gen/
 public/
+**/__pycache__/
 

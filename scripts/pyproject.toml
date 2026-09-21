@@ -3,7 +3,11 @@ name = "scripts"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11, <3.12"
 dependencies = [
+    "numpy<2",
+    "pandas>=1.5,<2",
+    "fit2gpx>=1.0.0",
     "gpxpy>=1.6.2",
+    "lxml>=6.1.3",
 ]
